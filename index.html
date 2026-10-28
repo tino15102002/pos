@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10151b" />
+    <title>Counter — Point of Sale</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">C</span><span>counter</span></div>
+        <nav aria-label="Primary navigation">
+          <a class="nav-item active" href="#sale"><span>▦</span> New sale</a>
+          <a class="nav-item" href="#orders"><span>↺</span> Orders <b>12</b></a>
+          <a class="nav-item" href="#products"><span>□</span> Products</a>
+          <a class="nav-item" href="#customers"><span>♙</span> Customers</a>
+        </nav>
+        <div class="sidebar-bottom"><a class="nav-item" href="#settings"><span>⚙</span> Settings</a><div class="user"><span class="avatar">JD</span><span><strong>Jamie Davis</strong><small>Store manager</small></span><span class="dots">•••</span></div></div>
+      </aside>
+
+      <section class="content" id="sale">
+        <header class="topbar"><div><p class="eyebrow">Tuesday, October 28, 2026</p><h1>Good morning, Jamie</h1></div><div class="top-actions"><button class="icon-btn" aria-label="Notifications">♢<i></i></button><button class="store-status"><span></span> Downtown store <b>⌄</b></button></div></header>
+        <div class="workspace">
+          <section class="catalog" aria-label="Product catalog">
+            <div class="search-row"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Search products or scan barcode..." /><kbd>⌘ K</kbd></label><button class="filter-btn">☷ <span>Filter</span></button></div>
+            <div class="categories" role="tablist"><button class="category active" data-category="All">All products</button><button class="category" data-category="Coffee">Coffee</button><button class="category" data-category="Bakery">Bakery</button><button class="category" data-category="Pantry">Pantry</button><button class="category" data-category="Merch">Merch</button></div>
+            <div class="catalog-heading"><h2>All products</h2><span id="result-count">8 items</span></div>
+            <div class="product-grid" id="product-grid"></div>
+          </section>
+          <aside class="cart-panel" aria-label="Current order">
+            <div class="cart-heading"><div><p class="eyebrow">Order #1048</p><h2>Current order</h2></div><button id="clear-cart" class="text-btn">Clear</button></div>
+            <div class="cart-items" id="cart-items"><div class="empty-cart"><span>＋</span><strong>Your cart is empty</strong><small>Select a product to start an order</small></div></div>
+            <div class="cart-footer"><div class="summary-row"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div><div class="summary-row"><span>Tax <small>8.25%</small></span><strong id="tax">$0.00</strong></div><div class="total-row"><span>Total</span><strong id="total">$0.00</strong></div><button id="checkout" class="checkout-btn" disabled>Charge $0.00 <span>→</span></button><p class="secure-note">⌁ Payments are secure and encrypted</p></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
